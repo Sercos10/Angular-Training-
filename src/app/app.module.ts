@@ -5,16 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NoteComponent } from './components/note/note.component';
 import { ButtonComponent } from './components/button/button.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { NotesComponent } from './pages/notes/notes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NoteComponent
+    //NoteComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ButtonComponent
+    ButtonComponent,
+    NotesComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
