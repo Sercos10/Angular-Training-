@@ -1,0 +1,12 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">title</label>
+        <input #title formControlName="title" type="text" class="form-control" id="exampleFormControlInput1" placeholder="title">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">description</label>
+        <textarea formControlName="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="this.form.status!='VALID'">guardar</button>
+</form>
+

@@ -7,6 +7,8 @@ import { NoteComponent } from './components/note/note.component';
 import { ButtonComponent } from './components/button/button.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NotesComponent } from './pages/notes/notes.component';
+import { NewComponent } from './pages/new/new.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { NotesComponent } from './pages/notes/notes.component';
     BrowserModule,
     AppRoutingModule,
     ButtonComponent,
-    NotesComponent
+    NotesComponent,
+    NewComponent,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,11 +7,15 @@ import { SubaComponent } from './pages/a/suba/suba.component';
 import {BComponent} from './pages/b/b.component';
 import { SubbComponent } from './pages/b/subb/subb.component';
 import { Error404Component } from './pages/error404/error404.component';
+import { NewComponent } from './pages/new/new.component';
 import { NotesComponent } from './pages/notes/notes.component';
 
 const routes: Routes = [
   {path:"home", component:NotesComponent ,
   canActivate:[LoginGuard]},
+  {path:"new", component:NewComponent,
+  canActivate:[LoginGuard]},
+  {path:"about", loadComponent: ()=>import('./pages/about/about.component').then(c=>c.AboutComponent)},
   {path:'', redirectTo:'/home', pathMatch:'full'},
   {path:'**', component:Error404Component}
   /**
