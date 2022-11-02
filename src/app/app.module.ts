@@ -13,6 +13,9 @@ import { GoogleLoginProvider} from '@abacritt/angularx-social-login';
 import { NotesService } from './services/notes.service';
 import { Router } from '@angular/router';
 import { LoginService } from './services/login.service';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { environment } from 'src/environments/environment';
 
 
 @NgModule({
@@ -28,7 +31,8 @@ import { LoginService } from './services/login.service';
     NotesComponent,
     NewComponent,
     HttpClientModule,
-
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule // for firestore
   ],
   providers: [NotesService,
     {

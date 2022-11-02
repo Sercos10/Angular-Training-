@@ -44,7 +44,7 @@ export class FormNoteComponent implements OnInit {
       });*/
     }
   }
-
+  
   submit(){
     //VALID
     let newNote:INote = {
@@ -53,7 +53,7 @@ export class FormNoteComponent implements OnInit {
       description: this.form.value.description
     }
     this.onsubmit.emit(newNote);
-    this.form.reset();
+    //this.form.reset();
   }
 
 }
