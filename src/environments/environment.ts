@@ -5,14 +5,13 @@
 export const environment = {
   production: false,
   firebaseConfig : {
-    apiKey: "AIzaSyD4AClsZgfOx5zE55uarqwgCyrgvtSg9uo",
-    authDomain: "notea-5b07b.firebaseapp.com",
-    databaseURL: "https://notea-5b07b-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "notea-5b07b",
-    storageBucket: "notea-5b07b.appspot.com",
-    messagingSenderId: "781976054609",
-    appId: "1:781976054609:web:bc63cc0f5285183c704170",
-    measurementId: "G-DDW40PLYD7"
+    apiKey: "AIzaSyDJ-2oMPH2OgClaQEnd_F5izLeB4ilwJrM",
+    authDomain: "angular-training-cc56b.firebaseapp.com",
+    projectId: "angular-training-cc56b",
+    storageBucket: "angular-training-cc56b.appspot.com",
+    messagingSenderId: "937868860766",
+    appId: "1:937868860766:web:932a19edee98d81ec3c3cf",
+    measurementId: "G-J5SZ9MPJYV"
   }
 };
 

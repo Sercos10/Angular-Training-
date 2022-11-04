@@ -16,6 +16,7 @@ import { LoginService } from './services/login.service';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from 'src/environments/environment';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 
 @NgModule({
@@ -32,7 +33,13 @@ import { environment } from 'src/environments/environment';
     NewComponent,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule // for firestore
+    AngularFirestoreModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    }) // for firestore
   ],
   providers: [NotesService,
     {
@@ -43,7 +50,7 @@ import { environment } from 'src/environments/environment';
           {
             id: GoogleLoginProvider.PROVIDER_ID,
             provider: new GoogleLoginProvider(
-            '781976054609-m18ac90tffqa0ikqokvpa5ddh74pf2og.apps.googleusercontent.com'
+            '937868860766-l5mkklcnsn4ks2al725q14hd3nps9qle.apps.googleusercontent.com'
             )
           }
         ],
