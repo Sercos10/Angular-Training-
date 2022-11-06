@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormNoteComponent } from 'src/app/components/form-note/form-note.component';
 import { NotesService } from 'src/app/services/notes.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new',
@@ -12,13 +13,14 @@ import { NotesService } from 'src/app/services/notes.service';
 })
 export class NewComponent implements OnInit {
 
-  constructor(private noteS:NotesService) { }
+  constructor(private noteS:NotesService, private router:Router) { }
 
   ngOnInit(): void {
   }
 
   addNote($event:any){
     this.noteS.createNote($event);
+    this.router.navigate(['/home']);
   }
 
 }
