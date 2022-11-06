@@ -19,6 +19,7 @@ export class LoginService {
       this.user = user;
       this.loggedIn = (user != null);
       if(this.loggedIn){
+        //localStorage.setItem('user', JSON.stringify(this.user));
         if(this.originalPath){
           this.router.navigate([this.originalPath]);
           this.originalPath='';
