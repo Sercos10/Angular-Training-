@@ -19,6 +19,7 @@ export class NavbarComponent implements OnInit {
   }
 
   public logout(){
+    localStorage.clear();
     this.loginS.signOut();
     }
 
