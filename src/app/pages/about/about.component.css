@@ -1,5 +1,4 @@
 .skills{
-    background-color: rgb(235, 229, 219);
     text-align: center;
 }
 
@@ -11,13 +10,91 @@ ul{
     display: inline-block;
     margin: 10px;
     padding: 10px;
-    border: 1px solid black;
-    background-color: rgb(230, 249, 230);
+    border: 1px solid white;
+    
     border-radius: 5px;
 }
 .personal{
-    background-color: rgb(235, 229, 219);
+    margin-bottom: 2%;
+}
+.personal>span{
+    padding: 1%;
 }
 .personal>h1{
     margin-left: 4%;
+}
+
+.spinner {
+    height: 50px;
+    width: max-content;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: monospace;
+    letter-spacing: 1em;
+    color: white;
+    filter: drop-shadow(0 0 10px);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+   }
+   
+   .spinner span {
+    animation: loading6454 1.75s ease infinite;
+   }
+   
+   .spinner span:nth-child(2) {
+    animation-delay: 0.25s;
+   }
+   
+   .spinner span:nth-child(3) {
+    animation-delay: 0.5s;
+   }
+   
+   .spinner span:nth-child(4) {
+    animation-delay: 0.75s;
+   }
+   
+   .spinner span:nth-child(5) {
+    animation-delay: 1s;
+   }
+   
+   .spinner span:nth-child(6) {
+    animation-delay: 1.25s;
+   }
+   
+   .spinner span:nth-child(7) {
+    animation-delay: 1.5s;
+   }
+
+   .spinner span:nth-child(8) {
+    animation-delay: 1.75s;
+   }
+   
+   @keyframes loading6454 {
+    0%, 100% {
+     transform: translateY(0);
+    }
+   
+    50% {
+     transform: translateY(-10px);
+    }
+   }
+
+   .fondo {
+    color: white;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
